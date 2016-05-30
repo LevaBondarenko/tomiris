@@ -1,0 +1,271 @@
+.clear {
+  clear: both;
+}
+
+@font-face {
+  font-family: 'SU SB';
+  src: url("fonts/seguisb.ttf");
+}
+
+@font-face {
+  font-family: 'SU L';
+  src: url("fonts/segoeuisl.ttf");
+}
+
+body {
+  font-family: 'SU L';
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+h1 {
+  font: 600 3em 'AM';
+  text-align: center;
+  padding: 40px;
+  letter-spacing: 20px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  box-shadow: 3px 2px 3px #ccc;
+}
+
+.header__navigation {
+  list-style: none;
+  float: right;
+  margin: 50px 0 0 0;
+}
+
+.header__navigation li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.header__navigation li:last-child {
+  padding-right: 0;
+}
+
+.header__navigation li a {
+  float: left;
+  display: block;
+  color: #111;
+  border-bottom: 2px solid transparent;
+}
+
+.header__navigation li a:hover {
+  border-bottom: 2px solid brown;
+}
+
+.firstscreen {
+  background: url("../images/ARML8807.jpg");
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  position: relative;
+  min-height: 480px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px inset;
+}
+
+.firstscreen img {
+  margin: 0 auto;
+  position: relative;
+  left: 360px;
+  top: 120px;
+  width: 490px;
+}
+
+.firstscreen p {
+  width: 720px;
+  text-align: center;
+  font: 600 1.3em 'SU SB';
+  margin: 130px auto;
+  color: #fff;
+}
+
+.bg_black {
+  background: rgba(0, 0, 0, 0.09);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.brow {
+  height: 500px;
+  background: transparent url("../images/lojki.jpg") left top no-repeat;
+  background-size: 100% 100%;
+}
+
+.brow .container {
+  position: relative;
+  height: 100%;
+}
+
+.brow .container .vilka {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+}
+
+.brow .container .lojka {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+}
+
+.brow .block {
+  width: 1080px;
+  margin: 50px auto;
+}
+
+.brow .block .blocks {
+  float: left;
+  width: 180px;
+  margin: 20px 60px;
+}
+
+.brow .block .blocks:last-child {
+  margin-right: 0;
+}
+
+.brow .block .blocks:first-child {
+  margin-left: 0;
+}
+
+.brow .block .blocks__img {
+  width: 125px;
+  position: relative;
+  left: 30px;
+}
+
+.brow .block .blocks .top_block {
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 1px 1px #ccc;
+  border-radius: 15px;
+  height: 180px;
+  position: relative;
+  z-index: 2;
+}
+
+.brow .block .blocks .top_block h4 {
+  font: 300 1.2em 'SU SB';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.brow .block .blocks .sub_block {
+  background: #fff;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  top: -160px;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 0 2px 2px #ccc;
+  border-radius: 5px;
+  height: 140px;
+  z-index: 1;
+  transition: all .5s ease-in-out;
+}
+
+.brow .block .blocks .sub_block p {
+  padding: 35px 10px;
+  text-align: center;
+  font: 300 0.9em 'SU L';
+}
+
+.title_img {
+  position: relative;
+  left: 35%;
+  top: 40px;
+}
+
+.bed {
+  width: 50px;
+  fill: #94d31b;
+}
+
+.news_block {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  border-bottom: 5px solid #501313;
+  padding-bottom: 25px;
+}
+
+.news_container {
+  padding: 50px 0;
+}
+
+.block_news {
+  width: 30%;
+  padding: 20px 0 50px 0;
+  float: left;
+  margin: 0px 30px;
+}
+
+.block_news:last-child {
+  margin-right: 0;
+}
+
+.block_news:first-child {
+  margin-left: 0;
+}
+
+.news_date {
+  font: 600 1em 'SU SB';
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.title_news {
+  font: 600 1em 'SU SB';
+  margin: 0 0 0 10px;
+  text-transform: uppercase;
+  float: left;
+}
+
+.content_news {
+  float: left;
+  margin: 10px 0 0 0;
+}
+
+a.news_more {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: all .3s ease-in-out;
+  border: 1px solid #000;
+  padding: 7px 15px;
+  margin: 15px 0;
+  float: left;
+  box-sizing: border-box;
+}
+
+a.news_more:hover {
+  background: #000;
+  color: #fff;
+}
+
+.interier {
+  background: transparent url("../images/lojki.jpg") left top no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 40px;
+}

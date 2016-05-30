@@ -1,0 +1,67 @@
+.clear{
+	clear: both;
+}
+@import "header.scss";
+.bed{
+		width: 50px;
+	  fill: #94d31b; 
+}
+.news_block{
+	    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+		    border-bottom: 5px solid #501313;
+    padding-bottom: 25px;
+}
+.news_container{
+	padding: 50px 0;
+}
+.block_news{
+	    width: 30%;
+    padding: 20px 0 50px 0;
+		 float: left;
+		     margin: 0px 30px;
+				&:last-child{
+				margin-right: 0;
+				}
+				&:first-child{
+					margin-left: 0;
+				}
+}
+.news_date{
+	font:600 1em 'SU SB';
+	float: left;
+	margin: 0 10px 0 0;
+}
+.title_news{
+	font:600 1em 'SU SB';
+	margin: 0 0 0 10px;
+	text-transform: uppercase;
+	float: left;
+}
+.content_news{
+	float: left;
+	margin: 10px 0 0 0;
+	
+}
+a.news_more{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	transition:all .3s ease-in-out;
+	border: 1px solid #000;
+	padding: 7px 15px;
+	    margin: 15px 0;
+	float: left;
+	box-sizing: border-box;
+	&:hover{
+		background: #000;
+		color: #fff;
+	}
+}
+.interier{
+	background: transparent url("../images/lojki.jpg") left top no-repeat;
+    background-size: 100% 100%;
+		padding-bottom: 40px;
+}
