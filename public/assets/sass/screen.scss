@@ -46,8 +46,9 @@ body{
 .content_news{
 	float: left;
 	margin: 10px 0 0 0;
-
+	width: 100%;
 }
+
 a.news_more{
 	text-decoration: none;
 	text-transform: uppercase;
@@ -64,7 +65,7 @@ a.news_more{
 	}
 }
 .interier{
-	background: transparent url("../images/lojki.jpg") left top no-repeat;
+	background: transparent url("images/lojki.jpg") left top no-repeat;
     background-size: 100% 100%;
 	padding-bottom: 40px;
 }

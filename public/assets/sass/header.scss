@@ -57,7 +57,7 @@ h1{
 }
 .firstscreen{
 	
-	background: url('../images/ARML8807.jpg');
+	background: url('/images/ARML8807.jpg');
 	background-attachment: fixed;
 background-origin: initial;
 background-clip: initial;
@@ -91,7 +91,7 @@ box-shadow: 0px 0px 10px 0px inset;
 }
 .brow{
 	height: 500px;
-	background:transparent url('../images/lojki.jpg') left top no-repeat;
+	background:transparent url('/images/lojki.jpg') left top no-repeat;
 	background-size: 100% 100%;
 	.container{
 		position: relative;
