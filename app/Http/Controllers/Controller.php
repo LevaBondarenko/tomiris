@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use Illuminate\View\View;
 
 class Controller extends BaseController
 {
@@ -21,5 +22,11 @@ class Controller extends BaseController
             ->get();
 
         return \Illuminate\Support\Facades\View::make('welcome')->with('news',$news);
+    }
+    public function allNews()
+    {
+        $news = News::orderBy('id','desc')
+            ->paginate(5);
+        return view('admin.admin')->with('news',$news);
     }
 }

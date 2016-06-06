@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'Controller@LatestNews');
+Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews') );

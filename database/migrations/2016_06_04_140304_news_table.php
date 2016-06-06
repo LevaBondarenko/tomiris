@@ -18,6 +18,7 @@ class NewsTable extends Migration
             $table->string('preview_text');
             $table->text('detail_text');
             $table->date('date');
+            $table->date('img_src');
             $table->timestamps();
         });
     }
