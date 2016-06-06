@@ -12,7 +12,18 @@
 */
 
 Route::get('/', 'Controller@LatestNews');
-Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews','middleware'=>'auth') );
-Route::post('admin/save',array('as' => 'save', 'uses' => 'Controller@upload') );
+Route::get('admin/',array('as' => 'admin', 'uses' => 'HomeController@index') );
+
+Route::get('login', function (){
+    return view('auth.login');
+}, array('as'=>'login'));
+
+
+Route::get('auth/',array( 'uses' => 'Controller@Auth'));
+
+Route::post('admin/save',array('as' => 'save', 'uses' => 'HomeController@upload') );
+
+
+
 
 

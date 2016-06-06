@@ -1,7 +1,6 @@
 @extends('app')
 @section('title','Главная страница')
 
-
 @section('content')
     <section class="firstscreen" data-type="background" data-speed="10">
         <div class="bg_black">
@@ -54,7 +53,6 @@
                     </div>
                 </article>
             </div>
-            <img src="images/vilka.png" class="vilka" alt="">
         </div>
     </section>
     <section class="news">
