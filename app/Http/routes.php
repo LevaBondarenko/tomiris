@@ -22,8 +22,15 @@ Route::get('login', function (){
 Route::get('auth/',array( 'uses' => 'Controller@Auth'));
 
 Route::post('admin/save',array('as' => 'save', 'uses' => 'HomeController@upload') );
+Route::get('register', function (){
+    return view('home');
+}, array('as'=>'reg'));
 
 
 
+
+
+Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews','middleware'=>'auth') );
+Route::post('admin/save',array('as' => 'save', 'uses' => 'Controller@upload') );
 
 
