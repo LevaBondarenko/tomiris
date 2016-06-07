@@ -2,6 +2,7 @@
 @section('title','Новости')
 @section('content')
     <h1>Добавление записей</h1>
+
     {!! Form::open(array('route' => 'save','method'=>'post','enctype'=>'multipart/form-data')) !!}
     {!! Form::label('date','Дата') !!}
     {!! Form::date('date', \Carbon\Carbon::now())!!}
@@ -21,18 +22,32 @@
     <br>
     {!! Form::submit('Отправить',['class'=>'btn btn-default']) !!}
     {!! Form::close() !!}
+
+    <br>
+    <br>
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
     <h1>Все записи</h1>
-    <section class="box_news">
+    <section class="box_news" style="background: #ccc;">
         @foreach($news as $item)
-            <article class="block_news" style="width: 100%;">
+            <article class="block_news" style="width: 100%; border: 1px solid #111; margin: 10px 0; padding: 20px;">
+                <span style="float: left; margin-right: 10px">{{$item->id}}</span>
                 <img src="{{$item->img_src}}" alt="" style="width: 50px;">
                 <span class="news_date">{{$item->date}}</span>
                 <h4 class="title_news">{{$item->title}}</h4>
                 <p class="content_news">{{$item->preview_text}}</p>
-                <a class="news_more" href="news/show/{{$item->id}}">Подробнее</a>
+                <div class="panel_edit" style="float: right">
+                   <a class="btn btn-danger" href="admin/news/delete/{{$item->id}}">Удалить</a>
+                    <br>
+                    <br>
+                    <a class="btn bg-info" href="admin/news/update/{{$item->id}}">Редактировать</a>
+
+                </div>
             </article>
         @endforeach
     </section>
-
-    @yield('status')
+{{$news->links()}}
 @endsection

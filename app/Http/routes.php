@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'Controller@LatestNews');
-Route::get('admin/',array('as' => 'admin', 'uses' => 'HomeController@index') );
+//Route::get('admin/',array('as' => 'admin', 'uses' => 'HomeController@index') );
 
 Route::get('login', function (){
     return view('auth.login');
@@ -21,16 +21,19 @@ Route::get('login', function (){
 
 Route::get('auth/',array( 'uses' => 'Controller@Auth'));
 
-Route::post('admin/save',array('as' => 'save', 'uses' => 'HomeController@upload') );
+//Route::post('admin/save',array('as' => 'save', 'uses' => 'HomeController@upload') );
 Route::get('register', function (){
     return view('home');
-}, array('as'=>'reg'));
+});
 
 
 
 
 
-Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews','middleware'=>'auth') );
+Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews') );
+Route::get('admin/news/delete/{id}',array('as' => 'adminDelete', 'uses' => 'Controller@DeleteNews') );
+Route::get('admin/news/update/{id}',array('as' => 'adminUpdate', 'uses' => 'Controller@UpdateNews') );
+Route::post('admin/news/update/save',array('as' => 'adminUpdateSave', 'uses' => 'Controller@SaveNews') );
 Route::post('admin/save',array('as' => 'save', 'uses' => 'Controller@upload') );
 
 
