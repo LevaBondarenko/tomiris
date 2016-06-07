@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\News;
-use Illuminate\Auth\Access\Response;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,13 +12,11 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Illuminate\Support\Facades\Auth;
-use Validator;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
-   
+
     public function LatestNews()
     {
 
@@ -27,24 +24,39 @@ class Controller extends BaseController
             ->take(3)
             ->get();
 
-        return \Illuminate\Support\Facades\View::make('index')->with('news',$news);
+        return \Illuminate\Support\Facades\View::make('welcome')->with('news',$news);
     }
-    public function Auth(Request $request)
+    public function allNews()
     {
-        $rules = array('email'=>'required','password'=>'required');
-
-        $validator = Validator::make($request->all(),$rules);
-        if($validator->fails()){
-            return Redirect('login')->withErrors($validator);
-        }
-        $auth = Auth::attempt(array(
-            'email'=> $request->input('email'),
-            'password'=>$request->input('password')
-        ),false);
-        if (!$auth){
-            return Redirect('login')->withErrors(array('Ошибка авторизации'));
-        }
-        return Redirect('admin');
+        $news = News::orderBy('id','desc')
+            ->paginate(5);
+        return view('admin.admin')->with('news',$news);
     }
+    public function upload(News $news,Request $request)
+    {
+        if(Input::hasFile('image')){
+            echo 'Uploaded<br/>';
+            $image = $request->file('image');
+            $image->move('uploads',$image->getClientOriginalName());
+            $path = "uploads/".$image->getClientOriginalName();
 
+        }else{
+            echo 'Ошибка Добавления картинки';
+        }
+
+
+
+        if($news->create(array(
+            'date'=>$request->date,
+            'title'=>$request->title,
+            'preview_text'=>$request->preview_text,
+            'detail_text'=>$request->detail_text,
+            'img_src'=>$path
+            )
+        ))
+            return redirect()->route('admin')->with('status','Запись добавлена');
+        else
+            echo 'Ошибка';
+
+    }
 }

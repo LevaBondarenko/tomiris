@@ -30,5 +30,7 @@ Route::get('register', function (){
 
 
 
+Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews','middleware'=>'auth') );
+Route::post('admin/save',array('as' => 'save', 'uses' => 'Controller@upload') );
 
 
