@@ -54,7 +54,10 @@ class AuthController extends Controller
             'password' => 'required|min:6|confirmed',
         ]);
     }
+    public function postLogin()
+    {
 
+    }
     /**
      * Create a new user instance after a valid registration.
      *
