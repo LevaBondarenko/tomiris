@@ -77,6 +77,8 @@ class Controller extends BaseController
 
 
 
+
+
     public function DeleteNews($id)
     {
         $news = News::find($id);
@@ -85,11 +87,19 @@ class Controller extends BaseController
     }
 
 
+
+
+
+
     public function UpdateNews($id)
     {
         $new = News::find($id);
         return view('admin.update')->with('new',$new);
     }
+
+
+
+
 
     public function SaveNews(Request $request)
     {

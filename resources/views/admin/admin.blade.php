@@ -3,18 +3,19 @@
 @section('content')
     <h1>Добавление записей</h1>
 
+
     {!! Form::open(array('route' => 'save','method'=>'post','enctype'=>'multipart/form-data')) !!}
     {!! Form::label('date','Дата') !!}
-    {!! Form::date('date', \Carbon\Carbon::now())!!}
+    <input type="date" name="date" id="" required>
     <br>
     {!! Form::label('title','Заголовкок') !!}
-    {!! Form::text('title','',['class'=>'form-control'])!!}
+    {!! Form::text('title','',['class'=>'form-control'],['required' => 'required'])!!}
     <br>
     {!! Form::label('preview_text','Первичный текст') !!}
-    {!! Form::text('preview_text','',['class'=>'form-control'])!!}
+    {!! Form::text('preview_text','',['class'=>'form-control'],['required' => 'required'])!!}
     <br>
     {!! Form::label('detail_text','Детальный текст') !!}
-    {!! Form::text('detail_text','',['class'=>'form-control'])!!}
+    {!! Form::text('detail_text','',['class'=>'form-control'],['required' => 'required'])!!}
     <br>
     {!! Form::label('image','Изображение') !!}
     {!! Form::file('image','',['class'=>'form-control'])!!}

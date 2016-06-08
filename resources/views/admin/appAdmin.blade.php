@@ -3,4 +3,5 @@
     @yield('content')
 
 </div>
+@yield('modal')
 @include('admin.layouts.footer')

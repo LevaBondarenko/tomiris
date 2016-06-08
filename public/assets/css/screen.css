@@ -252,7 +252,13 @@ h1 {
   width: 100%;
 }
 
-a.news_more {
+a:hover {
+  text-decoration: none;
+}
+
+.news_more {
+  background: transparent;
+  border-radius: 0;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -264,7 +270,7 @@ a.news_more {
   box-sizing: border-box;
 }
 
-a.news_more:hover {
+.news_more:hover {
   background: #000;
   color: #fff;
 }
