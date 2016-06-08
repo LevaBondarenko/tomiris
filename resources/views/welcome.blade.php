@@ -69,8 +69,26 @@
                         <span class="news_date">{{$item->date}}</span>
                         <h4 class="title_news">{{$item->title}}</h4>
                         <p class="content_news">{{$item->preview_text}}</p>
-                        <a class="news_more" href="news/show/{{$item->id}}">Подробнее</a>
+                        <button class="btn news_more" data-toggle="modal" data-target="#modal-{{$item->id}}" >Подробнее</button>
+                        <div class="modal fade" id="modal-{{$item->id}}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">{{$item->title}}</h4>
+                                        <button class="close" type="button" data-dismiss="modal">X</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>{{mb_substr($item->preview_text,0,200)}}</p>
+                                        <p>{{mb_substr($item->detail_text,0,200)}}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <span>{{$item->date}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </article>
+
                 @endforeach
             </section>
         </div>

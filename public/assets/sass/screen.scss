@@ -48,8 +48,12 @@ body{
 	margin: 10px 0 0 0;
 	width: 100%;
 }
-
-a.news_more{
+a:hover{
+	text-decoration:  none;
+}
+.news_more{
+	background: transparent;
+	border-radius: 0;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #000;

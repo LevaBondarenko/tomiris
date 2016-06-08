@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -56,7 +60,23 @@ class AuthController extends Controller
     }
     public function postLogin()
     {
+        $rules = array('email'=>'required','password'=>'required');
+        $valudator = Validator::make(Input::all(),$rules);
 
+        if($valudator->fails())
+        {
+            return redirect('login')->withErrors($valudator);
+        }
+
+        $auth = Auth::attempt(array(
+            'email'=>Input::get('email'),
+            'password'=>Input::get('password')
+        ),false);
+
+        if(! $auth){
+            return redirect('login')->withErrors(array('Ошибка авторизации'));
+        }
+        return redirect('admin');
     }
     /**
      * Create a new user instance after a valid registration.
@@ -64,12 +84,23 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+//    protected function create(Request $data)
+//    {
+//        return User::create([
+//            'name' => $data->name,
+//            'email' => $data->email,
+//            'password' => bcrypt($data->password),
+//        ]);
+//        return redirect('admin')->with('status','Юзер создан');
+//    }
+
+
+
+    protected function logout()
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        Auth::logout();
+        return redirect('admin/')->with('status','Вы вышли');
     }
+
+
 }

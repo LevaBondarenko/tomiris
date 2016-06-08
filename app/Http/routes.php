@@ -12,7 +12,6 @@
 */
 
 Route::get('/', 'Controller@LatestNews');
-Route::get('admin/',array('as' => 'admin', 'uses' => 'HomeController@index') );
 
 Route::get('login', function (){
     return view('auth.login');
@@ -20,22 +19,32 @@ Route::get('login', function (){
 
 
 Route::get('auth/',array( 'uses' => 'Controller@Auth'));
-
-Route::post('admin/save',array('as' => 'save', 'uses' => 'HomeController@upload') );
-Route::get('register', function (){
-    return view('home');
-}, array('as'=>'reg'));
+Route::get('modal',function(){
+    return view('modal');
+});
 
 
 
 
+
+//Роуты админа
 
 Route::get('admin/',array('as' => 'admin', 'uses' => 'Controller@allNews','middleware'=>'auth') );
 Route::get('login/',array('as' => 'login', 'uses' => 'Auth\AuthController@getLogin') );
 Route::post('login/',array('as'=>'postLogin','uses' => 'Auth\AuthController@postLogin') );
+Route::get('logout/',array('as'=>'logout','uses' => 'Auth\AuthController@logout') );
 Route::post('admin/save',array('as' => 'save', 'uses' => 'Controller@upload') );
 
 
+Route::post('register/save','Auth\AuthController@create');
+Route::get('admin/news/delete/{id}',array('as' => 'adminDelete', 'uses' => 'Controller@DeleteNews','middleware'=>'auth') );
+Route::get('admin/news/update/{id}',array('as' => 'adminUpdate', 'uses' => 'Controller@UpdateNews','middleware'=>'auth') );
+Route::post('admin/news/update/save',array('as' => 'adminUpdateSave', 'uses' => 'Controller@SaveNews') );
+Route::post('admin/save',array('as' => 'save', 'uses' => 'Controller@upload') );
+Route::get('/getRequest',function(){
+    if(\Illuminate\Support\Facades\Request::ajax()){
+        return 'getRequest';
+    }
+});
 
-Route::auth();
-
+//end

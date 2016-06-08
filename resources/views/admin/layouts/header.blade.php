@@ -17,10 +17,23 @@
 
 </head>
 <body>
-<header class="header">
+<header class="header" style="height: 60px;">
     <div class="container">
-        <ul class="header__navigation">
-            <li><a href="#">Новости</a></li>
+        @if(\Illuminate\Support\Facades\Auth::check())
+            <span style="float: left;">Вы авторизованны</span>
+        @endif
+        <ul class="header__navigation" style="margin: 20px 0 0 0;">
+
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <li><a href="#">Новости</a></li>
+            @else
+
+            @endif
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <a href="{{url('logout/')}}">Выйти</a>
+            @else
+                <a href="{{url('admin/')}}">Вход</a>
+            @endif
         </ul>
     </div>
 </header>
