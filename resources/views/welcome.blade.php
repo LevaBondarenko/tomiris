@@ -73,10 +73,14 @@
                         <div class="modal fade" id="modal-{{$item->id}}">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header">
+
+                                    <div class="modal-header big" style="    background: url('{{$item->img_src}}') no-repeat 50%;
+    background-size: 100% 100%;">
+
                                         <h4 class="modal-title">{{$item->title}}</h4>
                                         <button class="close" type="button" data-dismiss="modal">X</button>
                                     </div>
+
                                     <div class="modal-body">
                                         <p>{{mb_substr($item->preview_text,0,200)}}</p>
                                         <p>{{mb_substr($item->detail_text,0,200)}}</p>

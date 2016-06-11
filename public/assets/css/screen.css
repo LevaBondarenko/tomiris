@@ -280,3 +280,20 @@ a:hover {
   background-size: 100% 100%;
   padding-bottom: 40px;
 }
+
+.fade.in {
+  z-index: 3;
+}
+
+.modal {
+  z-index: 8 !important;
+}
+
+.big {
+  height: 300px;
+  width: 100%;
+}
+
+.modal-content {
+  border-radius: 0;
+}
