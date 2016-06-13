@@ -18,7 +18,7 @@
     {!! Form::text('detail_text','',['class'=>'form-control'],['required' => 'required'])!!}
     <br>
     {!! Form::label('image','Изображение') !!}
-    {!! Form::file('image','',['class'=>'form-control'])!!}
+    {!! Form::file('image',['class'=>'form-control'])!!}
     <input type="hidden" value="{{csrf_token()}}">
     <br>
     {!! Form::submit('Отправить',['class'=>'btn btn-default']) !!}
