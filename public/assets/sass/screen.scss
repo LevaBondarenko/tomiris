@@ -70,9 +70,9 @@ a:hover{
 	}
 }
 .interier{
-	background: transparent url("images/lojki.jpg") left top no-repeat;
+	background: transparent url("/images/lojki.jpg") left top no-repeat;
     background-size: 100% 100%;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 .content{
 	background: #ccc;
@@ -92,3 +92,45 @@ a:hover{
     height: 300px;
 	float: left;
 }
+#carousel{
+	position: relative;
+}
+.owl-carousel .owl-item{
+	margin: 0 10px;
+}
+.owl-wrapper .owl-item:first-child{
+margin-left: 0;
+}
+.owl-carousel .owl-item img{
+	max-width: 300px;
+}
+#carousel-2 .owl-carousel .owl-item img{
+	max-width: 250px !important;
+}
+.owl-buttons{
+	     position: absolute;
+    top: 80px;
+    left: -55px;
+    width: 1280px;
+	    z-index: 0;
+}
+.owl-carousel .owl-wrapper-outer{
+	z-index: 1;
+}
+.owl-prev{
+	background: url('/images/larrow.png');
+	    background-size: 100% 100%;
+    color: transparent;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.owl-next{
+	background: url('/images/right-arrow.png');
+	    background-size: 100% 100%;
+    color: transparent;
+	width: 50px;
+	height: 50px;
+	float: right;
+}
+

@@ -78,9 +78,9 @@ h1 {
   /* background-attachment: fixed; */
   background-origin: initial;
   background-clip: initial;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: 100% 50%; */
+  background-position: 100% 50%;
   position: relative;
   min-height: 850px;
   position: relative;
@@ -161,9 +161,9 @@ h1 {
 
 .brow .block .blocks .top_block {
   background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0px 0px 1px 1px #ccc;
-  border-radius: 15px;
+  border: 1px solid #ddd;
+  /* box-shadow: 0px 0px 1px 1px #ccc; */
+  /* border-radius: 15px; */
   height: 180px;
   position: relative;
   z-index: 2;
@@ -182,8 +182,8 @@ h1 {
   position: relative;
   top: -160px;
   /* border: 1px solid #ccc; */
-  box-shadow: 0 0 2px 2px #ccc;
-  border-radius: 5px;
+  box-shadow: 0 0 1px 1px #ddd;
+  /* border-radius: 5px; */
   height: 140px;
   z-index: 1;
   transition: all .5s ease-in-out;
@@ -199,6 +199,7 @@ h1 {
   position: relative;
   left: 35%;
   top: 40px;
+  padding-top: 30px;
 }
 
 .fade.in {
@@ -207,6 +208,16 @@ h1 {
 
 .modal {
   z-index: 1040 !important;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .bed {
@@ -286,9 +297,9 @@ a:hover {
 }
 
 .interier {
-  background: transparent url("images/lojki.jpg") left top no-repeat;
+  background: transparent url("/images/lojki.jpg") left top no-repeat;
   background-size: 100% 100%;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .content {
@@ -310,4 +321,54 @@ a:hover {
   width: 300px;
   height: 300px;
   float: left;
+}
+
+#carousel {
+  position: relative;
+}
+
+.owl-carousel .owl-item {
+  margin: 0 10px;
+}
+
+.owl-wrapper .owl-item:first-child {
+  margin-left: 0;
+}
+
+.owl-carousel .owl-item img {
+  max-width: 300px;
+}
+
+#carousel-2 .owl-carousel .owl-item img {
+  max-width: 250px !important;
+}
+
+.owl-buttons {
+  position: absolute;
+  top: 80px;
+  left: -55px;
+  width: 1280px;
+  z-index: 0;
+}
+
+.owl-carousel .owl-wrapper-outer {
+  z-index: 1;
+}
+
+.owl-prev {
+  background: url("/images/larrow.png");
+  background-size: 100% 100%;
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.owl-next {
+  background: url("/images/right-arrow.png");
+  background-size: 100% 100%;
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  float: right;
 }

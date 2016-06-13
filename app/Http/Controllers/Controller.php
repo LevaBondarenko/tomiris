@@ -94,6 +94,7 @@ class Controller extends BaseController
     public function UpdateNews($id)
     {
         $new = News::find($id);
+
         return view('admin.update')->with('new',$new);
     }
 
@@ -110,24 +111,20 @@ class Controller extends BaseController
             $image = $request->file('image');
             $image->move('uploads', $image->getClientOriginalName());
             $path = "uploads/" . $image->getClientOriginalName();
-            if ($new->create(array(
-                    'date' => $request->date,
-                    'title' => $request->title,
-                    'preview_text' => $request->preview_text,
-                    'detail_text' => $request->detail_text,
-                    'img_src' => $path
-                )
-            )
-            )
-                return redirect('admin')->with('status', 'Запись отредактирована');
-        } else {
+            $new->date = $request->date;
+            $new->title = $request->title;
+            $new->preview_text = $request->preview_text;
+            $new->detail_text = $request->detail_text;
+            $new->image = $path;
+            $new->save();
 
-            $new->create(array(
-                'date' => $request->date,
-                'title' => $request->title,
-                'preview_text' => $request->preview_text,
-                'detail_text' => $request->detail_text
-            ));
+            return redirect('admin')->with('status', 'Запись отредактирована');
+        } else {
+            $new->date = $request->date;
+            $new->title = $request->title;
+            $new->preview_text = $request->preview_text;
+            $new->detail_text = $request->detail_text;
+            $new->save();
             return redirect('admin')->with('status', 'Запись отредактирована');
         }
     }

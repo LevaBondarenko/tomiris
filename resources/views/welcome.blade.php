@@ -28,7 +28,7 @@
                 </article>
                 <article class="blocks">
                     <div class="top_block">
-                        <img class="blocks__img" src="images/hookah.png" alt="">
+                        <img class="blocks__img" src="images/hookah.svg" alt="">
                         <h4>кальян</h4>
                     </div>
                     <div class="sub_block">
@@ -74,7 +74,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h4 class="modal-title">{{$item->title}}</h4>
+                                        <div style="background: url({{$item->img_src}}});"></div>
                                         <button class="close" type="button" data-dismiss="modal">X</button>
                                     </div>
                                     <div class="modal-body">
@@ -91,6 +91,45 @@
 
                 @endforeach
             </section>
+
+        </div>
+        <section class="clear"></section>
+
+    </section>
+    <section class="interier">
+        <div class="container">
+            <h1>Наш интерьер</h1>
+            <ul id="carousel" class="owl-carousel carousel">
+                <li><img src="/images/ARML8905.jpg" width="300" height="200" alt="Owl_1" /></li>
+                <li><img src="/images/ARML8920.jpg" width="300" height="200" alt="Owl_2" /></li>
+                <li><img src="/images/ARML8935.jpg" width="300" height="200" alt="Owl_3" /></li>
+                <li><img src="/images/ARML8937.jpg" width="300" height="200" alt="Owl_4" /></li>
+                <li><img src="/images/ARML8966.jpg" width="300" height="200" alt="Owl_5" /></li>
+                <li><img src="/images/ARML8815.jpg" width="300" height="200" alt="Owl_6" /></li>
+                <li><img src="/images/ARML8935.jpg" width="300" height="200" alt="Owl_7" /></li>
+                <li><img src="/images/ARML8937.jpg" width="300" height="200" alt="Owl_8" /></li>
+            </ul>
+        </div>
+    </section>
+    <section class="news">
+        <div class="container news_container">
+            <h2 class="news_block">
+                Наши партнеры
+            </h2>
+
+            <section class="box_news">
+                <ul id="carousel-2" class="owl-carousel carousel">
+                    <li><img src="/images/ARML8905.jpg" width="300" height="200" alt="Owl_1" /></li>
+                    <li><img src="/images/ARML8920.jpg" width="300" height="200" alt="Owl_2" /></li>
+                    <li><img src="/images/ARML8935.jpg" width="300" height="200" alt="Owl_3" /></li>
+                    <li><img src="/images/ARML8937.jpg" width="300" height="200" alt="Owl_4" /></li>
+                    <li><img src="/images/ARML8966.jpg" width="300" height="200" alt="Owl_5" /></li>
+                    <li><img src="/images/ARML8815.jpg" width="300" height="200" alt="Owl_6" /></li>
+                    <li><img src="/images/ARML8935.jpg" width="300" height="200" alt="Owl_7" /></li>
+                    <li><img src="/images/ARML8937.jpg" width="300" height="200" alt="Owl_8" /></li>
+                </ul>
+            </section>
+
         </div>
         <section class="clear"></section>
 

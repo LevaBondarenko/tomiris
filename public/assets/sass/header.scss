@@ -58,15 +58,15 @@ h1{
 }
 .firstscreen{
 	
-    background: url("/images/ARML8833.jpg");
+        background: url("/images/ARML8833.jpg");
     /* background-attachment: fixed; */
     background-origin: initial;
     background-clip: initial;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: 100% 50%; */
+    background-position: 100% 50%;
     position: relative;
-       min-height: 850px;
+    min-height: 850px;
     position: relative;
     box-shadow: 0px 0px 350px 0px #222 inset;
 	img{
@@ -128,13 +128,13 @@ position: absolute;
 					left: 30px;
 				}
 			.top_block{
-			    background: #fff;
-			    border: 1px solid #ccc;
-			    box-shadow: 0px 0px 1px 1px #ccc;
-			    border-radius: 15px;
-			    height: 180px;
-   				 position: relative;
-   				 z-index: 2;
+			        background: #fff;
+    border: 1px solid #ddd;
+    /* box-shadow: 0px 0px 1px 1px #ccc; */
+    /* border-radius: 15px; */
+    height: 180px;
+    position: relative;
+    z-index: 2;
    				 h4{
    				 	font: 300 1.2em 'SU SB';
    				 	text-transform: uppercase;
@@ -142,17 +142,17 @@ position: absolute;
    				 }
 			}
 			.sub_block{
-			background: #fff;
+		    background: #fff;
     width: 95%;
     margin: 0 auto;
     position: relative;
     top: -160px;
     /* border: 1px solid #ccc; */
-    box-shadow: 0 0 2px 2px #ccc;
-    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #ddd;
+    /* border-radius: 5px; */
     height: 140px;
-        z-index: 1;
-        transition: all .5s ease-in-out;
+    z-index: 1;
+    transition: all .5s ease-in-out;
     p{
     	padding: 35px 10px;
     	text-align: center;
@@ -167,10 +167,19 @@ position: absolute;
 	    position: relative;
     left: 35%;
     top: 40px;
+	    padding-top: 30px;
 }
 .fade.in{
 	z-index: 2;
 }
 .modal{
 	    z-index: 1040 !important;
+}
+.modal-content{
+	border-radius: 0;
+}
+.modal-header .close{
+	    position: absolute;
+    top: 10px;
+    right: 10px;
 }
