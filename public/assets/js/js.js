@@ -17,38 +17,7 @@ $(".top_block").hover(
         $(this).parents().children('.sub_block').css('top','-160px');
       }
     );
-     $("#carousel").owlCarousel({
-          items :4 ,
-    itemsCustom : false,
-    itemsDesktop : [1199,4],
-    itemsDesktopSmall : [980,3],
-    itemsTablet: [768,2],
-    itemsTabletSmall: false,
-    itemsMobile : [479,1],
-    singleItem : false,
-    itemsScaleUp : true,
-     baseClass : "owl-carousel",
-    theme : "owl-theme",
-    navigation : true,
-    navigationText : ["prev","next"],
-    rewindNav : true,
-    scrollPerPage : false
-     });
-      $("#carousel-2").owlCarousel({
-          items :5 ,
-    itemsCustom : false,
-    itemsDesktop : [1199,4],
-    itemsDesktopSmall : [980,3],
-    itemsTablet: [768,2],
-    itemsTabletSmall: false,
-    itemsMobile : [479,1],
-    singleItem : false,
-    itemsScaleUp : true,
-    navigation : false,
-    rewindNav : true,
-    scrollPerPage : false
-     });
-
+     $("#carousel").owlCarousel();
 
 
 
