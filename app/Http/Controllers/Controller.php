@@ -109,13 +109,13 @@ class Controller extends BaseController
         $new = News::find($request->id);
         if (Input::hasFile('image')) {
             $image = $request->file('image');
-            $image->move('uploads', $image->getClientOriginalName());
-            $path = "uploads/" . $image->getClientOriginalName();
+            $image->move('uploads',$image->getClientOriginalName());
+            $path = "uploads/".$image->getClientOriginalName();
             $new->date = $request->date;
             $new->title = $request->title;
             $new->preview_text = $request->preview_text;
             $new->detail_text = $request->detail_text;
-            $new->image = $path;
+            $new->img_src = $path;
             $new->save();
 
             return redirect('admin')->with('status', 'Запись отредактирована');

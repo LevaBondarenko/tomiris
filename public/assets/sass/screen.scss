@@ -133,4 +133,46 @@ margin-left: 0;
 	height: 50px;
 	float: right;
 }
+.brown{
+	background:transparent url('/images/lojki.jpg') left top no-repeat;
+	background-size: 100% 100%;
+}
+.left{
+	float: left;
+	width: 300px;
+}
+.right{
+	float: right;
+	width: 300px;
+	text-align: right;
+}
+.social{
+	float: left;
+	width: 600px;
+	ul{
+			text-align: center;
+		margin: 150px 0;
 
+		li{
+			margin: 0 auto;
+			display: inline-block;
+			margin: 0 5px;
+			width: 40px;
+			img{
+				height: 40px;
+			}
+		}
+	}
+}
+.modal-header{
+border: 0;
+    background-color: rgba(0, 0, 0,.5);
+    opacity: 1;
+	color: #fff;
+	font: 600 1em 'SU L'; 
+}
+.modal-footer{
+	background-color: #AF9C89;
+	color: #fff;
+	font: 1.5em 900 'SU L';
+}
