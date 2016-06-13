@@ -39,12 +39,12 @@ h1 {
 
 .logo {
   float: left;
+  padding: 5px;
 }
 
 .header {
   width: 100%;
   height: 120px;
-  box-shadow: 3px 2px 3px #ccc;
 }
 
 .header__navigation {
@@ -74,17 +74,17 @@ h1 {
 }
 
 .firstscreen {
-  background: url("/images/ARML8807.jpg");
-  background-attachment: fixed;
+  background: url("/images/ARML8833.jpg");
+  /* background-attachment: fixed; */
   background-origin: initial;
   background-clip: initial;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 50%;
   position: relative;
-  min-height: 480px;
+  min-height: 850px;
   position: relative;
-  box-shadow: 0px 0px 10px 0px inset;
+  box-shadow: 0px 0px 350px 0px #222 inset;
 }
 
 .firstscreen img {
@@ -96,11 +96,12 @@ h1 {
 }
 
 .firstscreen p {
-  width: 720px;
+  width: 100%;
   text-align: center;
-  font: 600 1.3em 'SU SB';
+  font: 600 2.3em 'SU SB';
   margin: 130px auto;
   color: #fff;
+  padding: 100px 0 0 0;
 }
 
 .bg_black {
@@ -160,9 +161,9 @@ h1 {
 
 .brow .block .blocks .top_block {
   background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0px 0px 1px 1px #ccc;
-  border-radius: 15px;
+  border: 1px solid #ddd;
+  /* box-shadow: 0px 0px 1px 1px #ccc; */
+  /* border-radius: 15px; */
   height: 180px;
   position: relative;
   z-index: 2;
@@ -181,8 +182,8 @@ h1 {
   position: relative;
   top: -160px;
   /* border: 1px solid #ccc; */
-  box-shadow: 0 0 2px 2px #ccc;
-  border-radius: 5px;
+  box-shadow: 0 0 1px 1px #ddd;
+  /* border-radius: 5px; */
   height: 140px;
   z-index: 1;
   transition: all .5s ease-in-out;
@@ -198,6 +199,27 @@ h1 {
   position: relative;
   left: 35%;
   top: 40px;
+  padding-top: 30px;
+}
+
+.fade.in {
+  z-index: 2;
+}
+
+.modal {
+  z-index: 1040 !important;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+  color: #fff;
 }
 
 .bed {
@@ -277,26 +299,9 @@ a:hover {
 }
 
 .interier {
-  background: transparent url("images/lojki.jpg") left top no-repeat;
+  background: transparent url("/images/lojki.jpg") left top no-repeat;
   background-size: 100% 100%;
-  padding-bottom: 40px;
-}
-
-.fade.in {
-  z-index: 3;
-}
-
-.modal {
-  z-index: 8 !important;
-}
-
-.big {
-  height: 300px;
-  width: 100%;
-}
-
-.modal-content {
-  border-radius: 0;
+  padding-bottom: 80px;
 }
 
 .content {
@@ -318,4 +323,122 @@ a:hover {
   width: 300px;
   height: 300px;
   float: left;
+}
+
+#carousel {
+  position: relative;
+}
+
+.owl-carousel .owl-item {
+  margin: 0 10px;
+}
+
+.owl-wrapper .owl-item:first-child {
+  margin-left: 0;
+}
+
+.owl-carousel .owl-item img {
+  max-width: 300px;
+}
+
+#carousel-2 .owl-carousel .owl-item img {
+  max-width: 250px !important;
+}
+
+.owl-buttons {
+  position: absolute;
+  top: 80px;
+  left: -55px;
+  width: 1280px;
+  z-index: 0;
+}
+
+.owl-carousel .owl-wrapper-outer {
+  z-index: 1;
+}
+
+.owl-prev {
+  background: url("/images/larrow.png");
+  background-size: 100% 100%;
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.owl-next {
+  background: url("/images/right-arrow.png");
+  background-size: 100% 100%;
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
+.brown {
+  background: transparent url("/images/lojki.jpg") left top no-repeat;
+  background-size: 100% 100%;
+}
+
+.left {
+  float: left;
+  width: 300px;
+}
+
+.right {
+  float: right;
+  width: 300px;
+  text-align: right;
+}
+
+.social {
+  float: left;
+  width: 600px;
+}
+
+.social ul {
+  text-align: center;
+  margin: 150px 0;
+}
+
+.social ul li {
+  margin: 0 auto;
+  display: inline-block;
+  margin: 0 5px;
+  width: 40px;
+}
+
+.social ul li img {
+  height: 40px;
+}
+
+.modal-header {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  color: #fff;
+  font: 600 1em 'SU L';
+}
+
+.modal-footer {
+  background-color: #AF9C89;
+  color: #fff;
+  font: 1.5em 900 'SU L';
+}
+
+.fade.in {
+  z-index: 3;
+}
+
+.modal {
+  z-index: 8 !important;
+}
+
+.big {
+  height: 300px;
+  width: 100%;
+}
+
+.modal-content {
+  border-radius: 0;
 }

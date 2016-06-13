@@ -70,9 +70,9 @@ a:hover{
 	}
 }
 .interier{
-	background: transparent url("images/lojki.jpg") left top no-repeat;
+	background: transparent url("/images/lojki.jpg") left top no-repeat;
     background-size: 100% 100%;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 .content{
 	background: #ccc;
@@ -91,4 +91,88 @@ a:hover{
 	    width: 300px;
     height: 300px;
 	float: left;
+}
+#carousel{
+	position: relative;
+}
+.owl-carousel .owl-item{
+	margin: 0 10px;
+}
+.owl-wrapper .owl-item:first-child{
+margin-left: 0;
+}
+.owl-carousel .owl-item img{
+	max-width: 300px;
+}
+#carousel-2 .owl-carousel .owl-item img{
+	max-width: 250px !important;
+}
+.owl-buttons{
+	     position: absolute;
+    top: 80px;
+    left: -55px;
+    width: 1280px;
+	    z-index: 0;
+}
+.owl-carousel .owl-wrapper-outer{
+	z-index: 1;
+}
+.owl-prev{
+	background: url('/images/larrow.png');
+	    background-size: 100% 100%;
+    color: transparent;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.owl-next{
+	background: url('/images/right-arrow.png');
+	    background-size: 100% 100%;
+    color: transparent;
+	width: 50px;
+	height: 50px;
+	float: right;
+}
+.brown{
+	background:transparent url('/images/lojki.jpg') left top no-repeat;
+	background-size: 100% 100%;
+}
+.left{
+	float: left;
+	width: 300px;
+}
+.right{
+	float: right;
+	width: 300px;
+	text-align: right;
+}
+.social{
+	float: left;
+	width: 600px;
+	ul{
+			text-align: center;
+		margin: 150px 0;
+
+		li{
+			margin: 0 auto;
+			display: inline-block;
+			margin: 0 5px;
+			width: 40px;
+			img{
+				height: 40px;
+			}
+		}
+	}
+}
+.modal-header{
+border: 0;
+    background-color: rgba(0, 0, 0,.5);
+    opacity: 1;
+	color: #fff;
+	font: 600 1em 'SU L'; 
+}
+.modal-footer{
+	background-color: #AF9C89;
+	color: #fff;
+	font: 1.5em 900 'SU L';
 }
