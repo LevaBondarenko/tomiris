@@ -282,6 +282,23 @@ a:hover {
   padding-bottom: 40px;
 }
 
+.fade.in {
+  z-index: 3;
+}
+
+.modal {
+  z-index: 8 !important;
+}
+
+.big {
+  height: 300px;
+  width: 100%;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
 .content {
   background: #ccc;
   padding-bottom: 100px;

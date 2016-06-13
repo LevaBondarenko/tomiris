@@ -18,13 +18,13 @@
         <br>
         <label for="title">Картинка заголовка</label>
         @if(isset($new->img_src))
-            <img src="uploads/{{$new->img_src}}" alt="">
+            <img src="/{{$new->img_src}}" style="width: 150px;" alt="">
         @endif
         <input type="hidden" value="{{csrf_token()}}" name="_token">
-        <input type="file"  name="img_src" value="{{$new->img_src}}">
+        <input type="file"  name="image" value="/{{$new->img_src}}">
         <br>
         {!! Form::submit('Сохранить',['class'=>'btn btn-info']) !!}
     {!! Form::close() !!}
     <br>
-  
+
 @endsection

@@ -109,25 +109,26 @@ class Controller extends BaseController
         if (Input::hasFile('image')) {
             $image = $request->file('image');
             $image->move('uploads', $image->getClientOriginalName());
-            $path = "uploads/" . $image->getClientOriginalName();
-            if ($new->create(array(
-                    'date' => $request->date,
-                    'title' => $request->title,
-                    'preview_text' => $request->preview_text,
-                    'detail_text' => $request->detail_text,
-                    'img_src' => $path
-                )
-            )
-            )
+            $path= "uploads/" . $image->getClientOriginalName();
+
+            $new->img_src = $path;
+                    $new->date = $request->date;
+                    $new->title = $request->title;
+                    $new->preview_text = $request->preview_text;
+                    $new->detail_text = $request->detail_text;
+                    $new->img_src = $path;
+
+            $new->save();
+
                 return redirect('admin')->with('status', 'Запись отредактирована');
         } else {
 
-            $new->create(array(
-                'date' => $request->date,
-                'title' => $request->title,
-                'preview_text' => $request->preview_text,
-                'detail_text' => $request->detail_text
-            ));
+            $new->date = $request->date;
+            $new->title = $request->title;
+            $new->preview_text = $request->preview_text;
+            $new->detail_text = $request->detail_text;
+
+            $new->save();
             return redirect('admin')->with('status', 'Запись отредактирована');
         }
     }
