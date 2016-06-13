@@ -28,7 +28,7 @@
     <br>
     @if (session('status'))
         <div class="alert alert-success">
-            {{ session('status') }}
+            {{session('status')}}
         </div>
     @endif
     <h1>Все записи</h1>

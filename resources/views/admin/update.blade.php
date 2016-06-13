@@ -14,14 +14,15 @@
         <input type="text" class="form-control" name="preview_text" value="{{$new->preview_text}}">
         <br>
         <label for="title">Детальное описание</label>
-        <input type="text" class="form-control" name="detail_text" value="{{$new->detail_text}}">
+        <textarea class="form-control" name="detail_text" rows="5" >{{$new->detail_text}} </textarea>
         <br>
-        <label for="title">Картинка заголовка</label>
-        @if(isset($new->img_src))
-            <img src="uploads/{{$new->img_src}}" alt="">
+        @if(empty($new->img_src))
+            <label for="title">Картинка заголовка</label>
+
+            <img src="/{{$new->img_src}}" alt="">
         @endif
         <input type="hidden" value="{{csrf_token()}}" name="_token">
-        <input type="file"  name="img_src" value="{{$new->img_src}}">
+        <input type="file"  name="image" value="{{$new->img_src}}">
         <br>
         {!! Form::submit('Сохранить',['class'=>'btn btn-info']) !!}
     {!! Form::close() !!}
