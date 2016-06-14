@@ -35,7 +35,7 @@ $(".top_block").hover(
     scrollPerPage : false
      });
       $("#carousel-2").owlCarousel({
-          items :5 ,
+          items :8 ,
     itemsCustom : false,
     itemsDesktop : [1199,4],
     itemsDesktopSmall : [980,3],

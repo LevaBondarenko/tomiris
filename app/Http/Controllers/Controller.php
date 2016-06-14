@@ -128,4 +128,12 @@ class Controller extends BaseController
             return redirect('admin')->with('status', 'Запись отредактирована');
         }
     }
+
+
+    public function NewsPage()
+    {
+        $news = News::orderBy('id','desc')
+            ->paginate(5);
+        return view('pages.news')->with('news',$news);
+    }
 }

@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'Controller@LatestNews');
+Route::get('/news', 'Controller@NewsPage');
 
 Route::get('login', function (){
     return view('auth.login');
@@ -19,9 +20,7 @@ Route::get('login', function (){
 
 
 Route::get('auth/',array( 'uses' => 'Controller@Auth'));
-Route::get('modal',function(){
-    return view('modal');
-});
+
 
 
 
