@@ -26,7 +26,6 @@
 
             @if(\Illuminate\Support\Facades\Auth::check())
                 <li><a href="#">Новости</a></li>
-                <li><a href="/">На сайт</a></li>
             @else
 
             @endif
