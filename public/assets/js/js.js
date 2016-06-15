@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 var heroArray = [
         '/images/ARML8833.jpg',
-        '/images/IMG_6139.jpg','/images/ARML8920.jpg'
+        '/images/IMG_6139.jpg','/images/ARML8940.jpg'
     ]
 function preCacheHeros(){
     $.each(heroArray, function(){
@@ -102,7 +102,7 @@ function preCacheHeros(){
 $(window).load(function(){
     preCacheHeros();
 });
-var images=new Array('/images/ARML8833.jpg','/images/IMG_6139.jpg','/images/ARML8920.jpg');
+var images=new Array('/images/ARML8833.jpg','/images/IMG_6139.jpg','/images/ARML8940.jpg');
 var nextimage=0;
 doSlideshow();
 
