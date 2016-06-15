@@ -149,7 +149,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+
 
 
         /*
@@ -174,7 +174,7 @@ return [
     */
 
     'aliases' => [
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
