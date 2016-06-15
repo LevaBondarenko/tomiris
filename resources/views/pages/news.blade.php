@@ -4,7 +4,7 @@
 @section('content')
     <section class="content">
         <div class="container container_white">
-            <div class="content_img" style="background-image:url('../images/dollarphotoclub_44072826.jpg')"></div>
+            <div class="content_img" style="background:url('../images/ARML9740.jpg') no-repeat 50% 55%"></div>
             <h2 class="news_block">Новости</h2>
             <div class="news_box">
                 @foreach($news as $item)
@@ -47,9 +47,6 @@
                     </article>
 
                 @endforeach
-
-
-
             </div>
             <div class="clear"></div>
 {{$news->render()}}

@@ -85,4 +85,32 @@ $(document).ready(function() {
             console.log(data);
         });
     });
+     
 });
+
+var heroArray = [
+        '/images/ARML8833.jpg',
+        '/images/IMG_6139.jpg','/images/ARML8920.jpg'
+    ]
+function preCacheHeros(){
+    $.each(heroArray, function(){
+        var img = new Image();
+        img.src = this;
+    });
+};
+ 
+$(window).load(function(){
+    preCacheHeros();
+});
+var images=new Array('/images/ARML8833.jpg','/images/IMG_6139.jpg','/images/ARML8920.jpg');
+var nextimage=0;
+doSlideshow();
+
+function doSlideshow(){
+    if(nextimage>=images.length){nextimage=0;}
+    $('.firstscreen')
+    .css('background-image','url("'+images[nextimage++]+'")')
+
+        setTimeout(doSlideshow,3000);
+
+}

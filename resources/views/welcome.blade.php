@@ -3,11 +3,11 @@
 
 
 @section('content')
-    <section class="firstscreen" data-type="background" data-speed="10">
+    <section class="firstscreen">
         <div class="bg_black">
             <div class="container">
-                <img src="images/logo.png" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt soluta non voluptatem. Numquam et voluptatem aperiam animi, in exercitationem nam, provident mollitia consectetur, doloribus, deserunt quo? Porro incidunt tempore quae qui perspiciatis, facilis ipsa libero totam reprehenderit, enim assumenda. Est?</p>
+                <img src="images/logo.svg" alt="">
+                    <p>{{$content['0']['title']}}</p>
             </div>
         </div>
     </section>
@@ -23,7 +23,9 @@
                         <h4>Ресторан</h4>
                     </div>
                     <div class="sub_block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, hic.</p>
+                        <p>
+                            {{$content['0']['restoran']}}
+                        </p>
                     </div>
                 </article>
                 <article class="blocks">
@@ -32,7 +34,7 @@
                         <h4>кальян</h4>
                     </div>
                     <div class="sub_block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, hic.</p>
+                        <p>{{$content['0']['kalyan']}}</p>
                     </div>
                 </article>
                 <article class="blocks">
@@ -41,7 +43,7 @@
                         <h4>гостиница</h4>
                     </div>
                     <div class="sub_block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, hic.</p>
+                        <p>{{$content['0']['hotel']}}</p>
                     </div>
                 </article>
                 <article class="blocks">
@@ -50,7 +52,7 @@
                         <h4>сауна</h4>
                     </div>
                     <div class="sub_block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, hic.</p>
+                        <p>{{$content['0']['bathroom']}}</p>
                     </div>
                 </article>
             </div>
@@ -166,9 +168,9 @@
 
             <div class="social">
                 <ul>
-                    <li><a href="#"><img src="/images/vk.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/fb.png" alt=""></a></li>
+                    <li><a href="{{$content['0']['vk']}}"><img src="/images/vk.png" alt=""></a></li>
+                    <li><a href="{{$content['0']['insta']}}"><img src="/images/insta.png" alt=""></a></li>
+                    <li><a href="{{$content['0']['fb']}}"><img src="/images/fb.png" alt=""></a></li>
                 </ul>
             </div>
             <div class="right">
