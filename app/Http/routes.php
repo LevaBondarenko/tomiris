@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'Controller@LatestNews');
+Route::get('/', 'ContentController@index');
+Route::get('/news', 'Controller@NewsPage');
+Route::get('/hotel', 'Controller@HotelPage');
+Route::get('/restaurant', 'Controller@RestaurantPage');
+Route::get('/loungebar', 'Controller@LoungePage');
 
 Route::get('login', function (){
     return view('auth.login');
@@ -19,9 +23,7 @@ Route::get('login', function (){
 
 
 Route::get('auth/',array( 'uses' => 'Controller@Auth'));
-Route::get('modal',function(){
-    return view('modal');
-});
+
 
 
 

@@ -17,7 +17,38 @@ $(".top_block").hover(
         $(this).parents().children('.sub_block').css('top','-160px');
       }
     );
-     $("#carousel").owlCarousel();
+     $("#carousel").owlCarousel({
+          items :4 ,
+    itemsCustom : false,
+    itemsDesktop : [1199,4],
+    itemsDesktopSmall : [980,3],
+    itemsTablet: [768,2],
+    itemsTabletSmall: false,
+    itemsMobile : [479,1],
+    singleItem : false,
+    itemsScaleUp : true,
+     baseClass : "owl-carousel",
+    theme : "owl-theme",
+    navigation : true,
+    navigationText : ["prev","next"],
+    rewindNav : true,
+    scrollPerPage : false
+     });
+      $("#carousel-2").owlCarousel({
+          items :8 ,
+    itemsCustom : false,
+    itemsDesktop : [1199,4],
+    itemsDesktopSmall : [980,3],
+    itemsTablet: [768,2],
+    itemsTabletSmall: false,
+    itemsMobile : [479,1],
+    singleItem : false,
+    itemsScaleUp : true,
+    navigation : false,
+    rewindNav : true,
+    scrollPerPage : false
+     });
+
 
 
 
@@ -54,4 +85,32 @@ $(document).ready(function() {
             console.log(data);
         });
     });
+     
 });
+
+var heroArray = [
+        '/images/ARML8833.jpg',
+        '/images/IMG_6139.jpg','/images/ARML8920.jpg'
+    ]
+function preCacheHeros(){
+    $.each(heroArray, function(){
+        var img = new Image();
+        img.src = this;
+    });
+};
+ 
+$(window).load(function(){
+    preCacheHeros();
+});
+var images=new Array('/images/ARML8833.jpg','/images/IMG_6139.jpg','/images/ARML8920.jpg');
+var nextimage=0;
+doSlideshow();
+
+function doSlideshow(){
+    if(nextimage>=images.length){nextimage=0;}
+    $('.firstscreen')
+    .css('background-image','url("'+images[nextimage++]+'")')
+
+        setTimeout(doSlideshow,3000);
+
+}

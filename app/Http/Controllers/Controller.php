@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\News;
+use App\BasePage;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -18,17 +19,9 @@ class Controller extends BaseController
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
 
+    
 
 
-    public function LatestNews()
-    {
-
-        $news = News::orderBy('id','desc')
-            ->take(3)
-            ->get();
-
-        return \Illuminate\Support\Facades\View::make('welcome')->with('news',$news);
-    }
 
 
 
@@ -131,5 +124,28 @@ class Controller extends BaseController
             $new->save();
             return redirect('admin')->with('status', 'Запись отредактирована');
         }
+    }
+
+
+    public function NewsPage()
+    {
+        $news = News::orderBy('id','desc')
+            ->paginate(6);
+        return view('pages.news')->with('news',$news);
+    }
+
+    public function HotelPage()
+    {
+        return view('pages.hotel');
+    }
+
+    public function RestaurantPage()
+    {
+        return view('pages.restaurant');
+    }
+
+    public function LoungePage()
+    {
+        return view('pages.lounge');
     }
 }
