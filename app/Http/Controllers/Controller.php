@@ -148,4 +148,8 @@ class Controller extends BaseController
     {
         return view('pages.lounge');
     }
+    public function ContactsPage()
+    {
+        return view('pages.contacts');
+    }
 }

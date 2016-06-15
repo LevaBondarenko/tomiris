@@ -25,7 +25,8 @@
         <ul class="header__navigation" style="margin: 20px 0 0 0;">
 
             @if(\Illuminate\Support\Facades\Auth::check())
-                <li><a href="#">Новости</a></li>
+                <li><a href="/admin">Новости</a></li>
+                <li><a href="/">На сайт</a></li>
             @else
 
             @endif

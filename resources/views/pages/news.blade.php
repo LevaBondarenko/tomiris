@@ -22,7 +22,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         @if(!empty($item['img_src']))
-                                            <div class="img-responsive" style="background: url('/{{$item->img_src}}') no-repeat; -webkit-background-size:100% 100% ;background-size: 100% 100%;    height: 300px;">
+                                            <div class="img-responsive" style="background: url('/{{$item->img_src}}') no-repeat; -webkit-background-size:100% 100% ;background-size: cover;    height: 300px;">
                                                 <div class="modal-header">
                                                     <span>{{$item->title}}</span>
                                                     <button class="close" type="button" data-dismiss="modal">X</button>

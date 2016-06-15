@@ -16,6 +16,10 @@ Route::get('/news', 'Controller@NewsPage');
 Route::get('/hotel', 'Controller@HotelPage');
 Route::get('/restaurant', 'Controller@RestaurantPage');
 Route::get('/loungebar', 'Controller@LoungePage');
+Route::get('/contacts', 'Controller@ContactsPage');
+Route::get('/sauna', function(){
+    return view('pages.sauna');
+});
 
 Route::get('login', function (){
     return view('auth.login');

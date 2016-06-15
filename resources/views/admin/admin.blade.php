@@ -35,16 +35,19 @@
     <section class="box_news" style="background: #ccc;">
         @foreach($news as $item)
             <article class="block_news" style="width: 100%; border: 1px solid #111; margin: 10px 0; padding: 20px;">
-                <span style="float: left; margin-right: 10px">{{$item->id}}</span>
-                <img src="{{$item->img_src}}" alt="" style="width: 50px;">
-                <span class="news_date">{{$item->date}}</span>
-                <h4 class="title_news">{{$item->title}}</h4>
-                <p class="content_news">{{$item->preview_text}}</p>
+                <div class="box-news_content">
+                    <span style="float: left; margin-right: 10px">{{$item->id}}</span>
+                    <img src="{{$item->img_src}}" alt="" style="width: 50px;">
+                    <span class="news_date">{{$item->date}}</span>
+                    <h4 class="title_news">{{$item->title}}</h4>
+                    <p class="content_news">{{$item->preview_text}}</p>
+                </div>
                 <div class="panel_edit" style="float: right">
-                   <a class="btn btn-danger" href="admin/news/delete/{{$item->id}}">Удалить</a>
+                    <a class="btn bg-info" href="admin/news/update/{{$item->id}}" onClick="return window.confirm('Вы действительно хотите изменить?')">Редактировать</a>
                     <br>
                     <br>
-                    <a class="btn bg-info" href="admin/news/update/{{$item->id}}">Редактировать</a>
+                    <a class="btn btn-danger" onClick="return window.confirm('Вы действительно хотите удалить запись?')" href="admin/news/delete/{{$item->id}}">Удалить</a>
+
 
                 </div>
             </article>

@@ -67,6 +67,7 @@ h1{
     position: relative;
     min-height: 650px;
     position: relative;
+       background-repeat: no-repeat;
     background-size: 100% 100%;
   background-position: center center;
   width: 100%;
@@ -186,4 +187,14 @@ position: absolute;
     top: 10px;
     right: 10px;
 	    opacity: 1;color: #fff;
+}
+.mini-map{
+	width: 600px;
+	height: 400px;
+	float: right;
+	margin:  50px 0 50px 10px;
+}
+.box-news_content{
+	float: left;
+	width: 80%;
 }
