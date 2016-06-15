@@ -40,18 +40,18 @@ h1 {
 .logo {
   float: left;
   padding: 5px;
-  width: 350px;
+  width: 250px;
 }
 
 .header {
   width: 100%;
-  height: 120px;
+  height: auto;
 }
 
 .header__navigation {
   list-style: none;
   float: right;
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
 }
 
 .header__navigation li {
@@ -79,6 +79,7 @@ h1 {
   position: relative;
   min-height: 650px;
   position: relative;
+  background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
   width: 100%;
@@ -111,7 +112,7 @@ h1 {
 }
 
 .brow {
-  height: 500px;
+  height: auto;
   background: transparent url("/images/lojki.jpg") left top no-repeat;
   background-size: 100% 100%;
 }
@@ -178,12 +179,13 @@ h1 {
   background: #fff;
   width: 95%;
   margin: 0 auto;
+  opacity: 0;
   position: relative;
   top: -160px;
   /* border: 1px solid #ccc; */
   box-shadow: 0 0 1px 1px #ddd;
   /* border-radius: 5px; */
-  height: 140px;
+  height: auto;
   z-index: 1;
   transition: all .5s ease-in-out;
 }
@@ -219,6 +221,18 @@ h1 {
   right: 10px;
   opacity: 1;
   color: #fff;
+}
+
+.mini-map {
+  width: 600px;
+  height: 400px;
+  float: right;
+  margin: 50px 0 50px 10px;
+}
+
+.box-news_content {
+  float: left;
+  width: 80%;
 }
 
 .bed {

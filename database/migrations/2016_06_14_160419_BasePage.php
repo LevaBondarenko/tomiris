@@ -14,7 +14,7 @@ class BasePage extends Migration
     {
         Schema::create('my_page', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->text('title',255)->change();
             $table->string('restoran');
             $table->string('kalyan');
             $table->string('hotel');
@@ -33,6 +33,6 @@ class BasePage extends Migration
      */
     public function down()
     {
-        //
+
     }
 }
