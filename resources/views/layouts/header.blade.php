@@ -35,7 +35,7 @@
     <div class="container">
         <a href="/"><img src="images/logo.svg" alt="" class="logo"></a>
         <ul class="header__navigation">
-            <li><a href="/restaurant">РЕСТОРАН</a></li>
+            <li><a href="/restaurant">БАНКЕТНЫЙ ЗАЛ</a></li>
             <li><a href="/loungebar">LOUNGEBAR</a></li>
             <li><a href="/hotel">ГОСТНИЦА</a></li>
             <li><a href="/sauna">САУНА</a></li>
