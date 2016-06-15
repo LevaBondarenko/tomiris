@@ -2,25 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c8c495-9b31-47db-a6cc-e7c8d14b8737" name="Default" comment="START ADMIN">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContentController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/LatestNews.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/restaurant.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/lounge.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/hotel.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sass/header.scss" afterPath="$PROJECT_DIR$/public/assets/sass/header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/js.js" afterPath="$PROJECT_DIR$/public/assets/js/js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/screen.css" afterPath="$PROJECT_DIR$/public/assets/css/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/news.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/news.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sass/screen.scss" afterPath="$PROJECT_DIR$/public/assets/sass/screen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/ARML8920.jpg" afterPath="$PROJECT_DIR$/public/images/ARML8920.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/News.php" afterPath="$PROJECT_DIR$/app/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/ARML8833.jpg" afterPath="$PROJECT_DIR$/public/images/ARML8833.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/prepros.cfg" afterPath="$PROJECT_DIR$/public/assets/prepros.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tomiris.iws" />
@@ -53,7 +34,7 @@
       <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="588">
               <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
@@ -65,7 +46,7 @@
       <file leaf-file-name="ContentController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="392">
               <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="e#119#132#0#PHP" expanded="true" />
@@ -493,6 +474,7 @@
       <workItem from="1465877033070" duration="5194000" />
       <workItem from="1465892640188" duration="10924000" />
       <workItem from="1465957279962" duration="4000" />
+      <workItem from="1465957542838" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="START ADMIN">
       <created>1465036841766</created>
@@ -505,7 +487,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33858000" />
+    <option name="totallyTimeSpent" value="33894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -872,7 +854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="588">
           <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
@@ -890,7 +872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="392">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="e#119#132#0#PHP" expanded="true" />
