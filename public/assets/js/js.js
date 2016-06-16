@@ -12,9 +12,11 @@ $bgObj.css({ backgroundPosition: coords });
 $(".top_block").hover(
       function () {
         $(this).parents().children('.sub_block').css('top','-10px');
+        $(this).parents().children('.sub_block').css('opacity','1');
       },
       function () {
-        $(this).parents().children('.sub_block').css('top','-160px');
+        $(this).parents().children('.sub_block').css('top','-230px');
+          $(this).parents().children('.sub_block').css('opacity','0');
       }
     );
      $("#carousel").owlCarousel({

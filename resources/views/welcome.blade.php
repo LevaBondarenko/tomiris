@@ -20,7 +20,7 @@
                 <article class="blocks">
                     <div class="top_block">
                         <img class="blocks__img" src="images/tray.svg" alt="">
-                        <h4>Ресторан</h4>
+                        <h4>банкетный зал </h4>
                     </div>
                     <div class="sub_block">
                         <p>
@@ -31,7 +31,7 @@
                 <article class="blocks">
                     <div class="top_block">
                         <img class="blocks__img" src="images/hookah.svg" alt="">
-                        <h4>кальян</h4>
+                        <h4> lounge bar</h4>
                     </div>
                     <div class="sub_block">
                         <p>{{$content['0']['kalyan']}}</p>
