@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\News;
+use App\BasePage;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -18,17 +19,9 @@ class Controller extends BaseController
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
 
+    
 
 
-    public function LatestNews()
-    {
-
-        $news = News::orderBy('id','desc')
-            ->take(3)
-            ->get();
-
-        return \Illuminate\Support\Facades\View::make('welcome')->with('news',$news);
-    }
 
 
 
@@ -94,7 +87,6 @@ class Controller extends BaseController
     public function UpdateNews($id)
     {
         $new = News::find($id);
-
         return view('admin.update')->with('new',$new);
     }
 
@@ -109,23 +101,55 @@ class Controller extends BaseController
         $new = News::find($request->id);
         if (Input::hasFile('image')) {
             $image = $request->file('image');
-            $image->move('uploads',$image->getClientOriginalName());
-            $path = "uploads/".$image->getClientOriginalName();
-            $new->date = $request->date;
-            $new->title = $request->title;
-            $new->preview_text = $request->preview_text;
-            $new->detail_text = $request->detail_text;
+            $image->move('uploads', $image->getClientOriginalName());
+            $path= "uploads/" . $image->getClientOriginalName();
+
             $new->img_src = $path;
+                    $new->date = $request->date;
+                    $new->title = $request->title;
+                    $new->preview_text = $request->preview_text;
+                    $new->detail_text = $request->detail_text;
+                    $new->img_src = $path;
+
             $new->save();
 
-            return redirect('admin')->with('status', 'Запись отредактирована');
+                return redirect('admin')->with('status', 'Запись отредактирована');
         } else {
+
             $new->date = $request->date;
             $new->title = $request->title;
             $new->preview_text = $request->preview_text;
             $new->detail_text = $request->detail_text;
+
             $new->save();
             return redirect('admin')->with('status', 'Запись отредактирована');
         }
+    }
+
+
+    public function NewsPage()
+    {
+        $news = News::orderBy('id','desc')
+            ->paginate(6);
+        return view('pages.news')->with('news',$news);
+    }
+
+    public function HotelPage()
+    {
+        return view('pages.hotel');
+    }
+
+    public function RestaurantPage()
+    {
+        return view('pages.restaurant');
+    }
+
+    public function LoungePage()
+    {
+        return view('pages.lounge');
+    }
+    public function ContactsPage()
+    {
+        return view('pages.contacts');
     }
 }
